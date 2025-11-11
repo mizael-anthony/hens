@@ -56,37 +56,6 @@ export default function AboutPageClient({ translations }: AboutPageClientProps) 
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="border-0 shadow-lg rounded-xl">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{t.mission.title}</h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{t.mission.description}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg rounded-xl">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Eye className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{t.vision.title}</h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{t.vision.description}</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Values Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +96,29 @@ export default function AboutPageClient({ translations }: AboutPageClientProps) 
             </Card>
           </div>
         </div>
-      </section>      
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t.process.title}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.process.subtitle}</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {t.process.steps.map((step: any, index: number) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-900 text-white">

@@ -155,7 +155,7 @@ Staying current with these trends is crucial for delivering modern, performant w
       content: `
 # Building Scalable APIs: Best Practices and Design Patterns
 
-Creating APIs that can scale effectively is crucial for modern applications. Here are the key principles and patterns we follow at Mizatech.
+Creating APIs that can scale effectively is crucial for modern applications. Here are the key principles and patterns we follow at Hens.
 
 ## RESTful Design Principles
 
@@ -238,7 +238,7 @@ Choosing the right framework for cross-platform mobile development is crucial fo
 
 ## Our Recommendation
 
-At Mizatech, we choose the framework based on project requirements:
+At Hens, we choose the framework based on project requirements:
 
 - **React Native**: When you have existing web developers and need rapid prototyping
 - **Flutter**: When performance is critical and you want pixel-perfect UI
@@ -451,7 +451,7 @@ Rester à jour avec ces tendances est crucial pour livrer des applications web m
       content: `
 # Construction d'APIs Évolutives : Meilleures Pratiques et Modèles de Conception
 
-Créer des APIs qui peuvent évoluer efficacement est crucial pour les applications modernes. Voici les principes clés et les modèles que nous suivons chez Mizatech.
+Créer des APIs qui peuvent évoluer efficacement est crucial pour les applications modernes. Voici les principes clés et les modèles que nous suivons chez Hens.
 
 ## Principes de Conception RESTful
 

@@ -44,12 +44,12 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src="/images/mizatech-logo.png"
-              alt="Mizatech Logo"
+              alt="Hens Logo"
               width={40}
               height={40}
               className="rounded-full"
             />
-            <span className="text-xl font-bold text-gray-900">Mizatech</span>
+            <span className="text-xl font-bold text-gray-900">Hens</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -34,6 +34,28 @@ const translations = {
         description: "We work closely with our clients as partners, ensuring transparent communication throughout.",
       },
     },
+    process: {
+      title: "Our Development Process",
+      subtitle: "A proven methodology that ensures quality, transparency, and timely delivery.",
+      steps: [
+        {
+          title: "Discovery & Planning",
+          description: "We analyze your requirements and create a detailed project roadmap.",
+        },
+        {
+          title: "Design & Prototyping",
+          description: "Create wireframes and prototypes to visualize the final solution.",
+        },
+        {
+          title: "Development & Testing",
+          description: "Build your solution using best practices and rigorous testing.",
+        },
+        {
+          title: "Deployment & Support",
+          description: "Launch your project and provide ongoing maintenance and support.",
+        },
+      ],
+    },
     mission: {
       title: "Our Mission",
       description:
@@ -83,15 +105,27 @@ const translations = {
           "Nous travaillons étroitement avec nos clients en tant que partenaires, assurant une communication transparente.",
       },
     },
-    mission: {
-      title: "Notre Mission",
-      description:
-        "Autonomiser les entreprises avec des solutions technologiques innovantes qui stimulent la croissance, l'efficacité et l'avantage concurrentiel à l'ère numérique.",
-    },
-    vision: {
-      title: "Notre Vision",
-      description:
-        "Être le partenaire technologique de confiance pour les entreprises du monde entier, reconnu pour livrer des solutions numériques transformatrices qui dépassent les attentes.",
+    process: {
+      title: "Notre Processus de Développement",
+      subtitle: "Une méthodologie éprouvée qui garantit la qualité, la transparence et la livraison dans les délais.",
+      steps: [
+        {
+          title: "Découverte & Planification",
+          description: "Nous analysons vos exigences et créons une feuille de route détaillée du projet.",
+        },
+        {
+          title: "Design & Prototypage",
+          description: "Créer des wireframes et des prototypes pour visualiser la solution finale.",
+        },
+        {
+          title: "Développement & Tests",
+          description: "Construire votre solution en utilisant les meilleures pratiques et des tests rigoureux.",
+        },
+        {
+          title: "Déploiement & Support",
+          description: "Lancer votre projet et fournir une maintenance et un support continus.",
+        },
+      ],
     },
     cta: {
       title: "Travaillons Ensemble",

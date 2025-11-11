@@ -4,11 +4,11 @@
 
 export const COMPANY_INFO = {
   // Company details
-  name: "Mizatech",
-  fullName: "Mizatech LLC",
+  name: "Hens",
+  fullName: "HENS LLC",
 
   // Contact information
-  email: "mizatech@mizael.pro",
+  email: "anthony@mizael.pro",
   contactEmail: "mizaelanthony07@gmail.com", // For internal contact form submissions
   phone: "+33 6 12 34 56 78",
 

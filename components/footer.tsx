@@ -48,7 +48,7 @@ export default function Footer({ currentLang }: FooterProps) {
             <div className="flex items-center space-x-2">
               <Image
                 src="/images/mizatech-logo.png"
-                alt="Mizatech Logo"
+                alt="Hens Logo"
                 width={28}
                 height={28}
                 className="rounded-full"

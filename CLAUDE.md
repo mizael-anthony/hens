@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 portfolio/business website for Mizatech, a technology solutions company. The site features multilingual support (English/French), a blog system, and modern UI components built with shadcn/ui and Tailwind CSS.
+This is a Next.js 15 portfolio/business website for Hens, a technology solutions company. The site features multilingual support (English/French), a blog system, and modern UI components built with shadcn/ui and Tailwind CSS.
 
 ## Development Commands
 

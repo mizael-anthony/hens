@@ -77,23 +77,71 @@ export default function ServicesPageClient({ translations }: ServicesPageClientP
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t.process.title}</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.process.subtitle}</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{t.pricing.title}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.pricing.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {t.process.steps.map((step: any, index: number) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
-                  {index + 1}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {t.pricing.plans.map((plan: any, index: number) => (
+              <Card
+                key={index}
+                className={`border-0 shadow-lg rounded-xl overflow-hidden ${
+                  plan.featured ? 'ring-2 ring-orange-600 transform scale-105' : ''
+                }`}
+              >
+                {plan.featured && (
+                  <div className="bg-orange-600 text-white text-center py-2 text-sm font-semibold">
+                    {t.pricing.badge}
+                  </div>
+                )}
+                <CardHeader className="bg-white p-8 text-center">
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</CardTitle>
+                  <p className="text-gray-600 mb-6">{plan.description}</p>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    {plan.period && (
+                      <span className="text-gray-600 ml-2">{plan.period}</span>
+                    )}
+                  </div>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature: string, featureIndex: number) => {
+                      const isIncluded = feature.startsWith('✓');
+                      const isExcluded = feature.startsWith('✗');
+                      const text = feature.substring(2); // Remove ✓ or ✗ prefix
+
+                      return (
+                        <li key={featureIndex} className="flex items-start space-x-3">
+                          {isIncluded && (
+                            <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          )}
+                          {isExcluded && (
+                            <span className="text-red-500 font-bold flex-shrink-0 mt-0.5">✗</span>
+                          )}
+                          <span className={`${isExcluded ? 'text-gray-500 line-through' : 'text-gray-700'}`}>
+                            {text}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <Button
+                    asChild
+                    className={`w-full ${
+                      plan.featured
+                        ? 'bg-orange-600 hover:bg-orange-700 text-white'
+                        : 'bg-gray-900 hover:bg-gray-800 text-white'
+                    } rounded-lg py-3 font-semibold`}
+                  >
+                    <Link href="/contact">{plan.cta}</Link>
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

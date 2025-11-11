@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, createContext, useContext } from "react"
+import { useState, createContext, useContext, useEffect } from "react"
 import Navigation from "./navigation"
 import Footer from "./footer"
 
@@ -25,7 +25,21 @@ interface LayoutWrapperProps {
 }
 
 export default function LayoutWrapper({ children }: LayoutWrapperProps) {
-  const [currentLang, setCurrentLang] = useState<Language>("en")
+  // Initialize language from localStorage or default to "en"
+  const [currentLang, setCurrentLang] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("language")
+      return (stored as Language) || "en"
+    }
+    return "en"
+  })
+
+  // Persist language to localStorage whenever it changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("language", currentLang)
+    }
+  }, [currentLang])
 
   return (
     <LanguageContext.Provider value={{ currentLang, setLanguage: setCurrentLang }}>

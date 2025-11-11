@@ -10,7 +10,7 @@ const translations = {
   en: {
     hero: {
       title: "Legal Notice",
-      subtitle: "Important legal information, terms of service, and privacy policies for Mizatech services.",
+      subtitle: "Important legal information, terms of service, and privacy policies for Hens services.",
     },
     navigation: {
       title: "Quick Navigation",
@@ -35,12 +35,12 @@ const translations = {
         acceptance: {
           title: "1. Acceptance of Terms",
           content:
-            "By accessing and using Mizatech's services, you accept and agree to be bound by the terms and provision of this agreement. These terms apply to all visitors, users, and others who access or use our services.",
+            "By accessing and using Hens's services, you accept and agree to be bound by the terms and provision of this agreement. These terms apply to all visitors, users, and others who access or use our services.",
         },
         services: {
           title: "2. Description of Services",
           content:
-            "Mizatech provides web development, mobile development, API creation, and AI integration services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.",
+            "Hens provides web development, mobile development, API creation, and AI integration services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.",
         },
         responsibilities: {
           title: "3. User Responsibilities",
@@ -116,7 +116,7 @@ const translations = {
     hero: {
       title: "Mentions Légales",
       subtitle:
-        "Informations légales importantes, conditions d'utilisation et politiques de confidentialité pour les services Mizatech.",
+        "Informations légales importantes, conditions d'utilisation et politiques de confidentialité pour les services Hens.",
     },
     navigation: {
       title: "Navigation Rapide",
@@ -141,12 +141,12 @@ const translations = {
         acceptance: {
           title: "1. Acceptation des Conditions",
           content:
-            "En accédant et en utilisant les services de Mizatech, vous acceptez et convenez d'être lié par les termes et dispositions de cet accord. Ces conditions s'appliquent à tous les visiteurs, utilisateurs et autres qui accèdent ou utilisent nos services.",
+            "En accédant et en utilisant les services de Hens, vous acceptez et convenez d'être lié par les termes et dispositions de cet accord. Ces conditions s'appliquent à tous les visiteurs, utilisateurs et autres qui accèdent ou utilisent nos services.",
         },
         services: {
           title: "2. Description des Services",
           content:
-            "Mizatech fournit des services de développement web, développement mobile, création d'API et intégration IA. Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect de nos services à tout moment.",
+            "Hens fournit des services de développement web, développement mobile, création d'API et intégration IA. Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect de nos services à tout moment.",
         },
         responsibilities: {
           title: "3. Responsabilités de l'Utilisateur",

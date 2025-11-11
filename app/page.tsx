@@ -51,7 +51,7 @@ const translations = {
       items: [
         {
           question: "How long does an MVP development take?",
-          answer: "Our MVP development process typically takes 14 days from contract signature. This streamlined timeline ensures rapid time-to-market while maintaining high quality standards."
+          answer: "Our MVP development process typically takes 60 days in average from contract signature. This streamlined timeline ensures rapid time-to-market while maintaining high quality standards."
         },
         {
           question: "Do you provide ongoing support and maintenance?",
@@ -116,7 +116,7 @@ const translations = {
       items: [
         {
           question: "Combien de temps prend le développement d'un MVP ?",
-          answer: "Notre processus de développement MVP prend généralement 14 jours à partir de la signature du contrat. Ce délai optimisé garantit une mise sur le marché rapide tout en maintenant des standards de qualité élevés."
+          answer: "Notre processus de développement MVP prend généralement 60 jours en moyenne à partir de la signature du contrat. Ce délai optimisé garantit une mise sur le marché rapide tout en maintenant des standards de qualité élevés."
         },
         {
           question: "Fournissez-vous un support et une maintenance continus ?",
