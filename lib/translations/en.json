@@ -198,19 +198,16 @@
         {
           "name": "Base",
           "description": "Flexible daily rate for agile development",
-          "price": "$99",
-          "originalPrice": "$159",
+          "price": "$80",
+          "originalPrice": "$100",
           "period": "per day (ADR)",
           "features": [
-            "✓ Average Daily Rate (ADR) pricing",
             "✓ Flexible engagement duration",
-            "✓ Direct collaboration with our team",
             "✓ Agile iterative development",
-            "✓ Daily progress updates",
-            "✓ Source code ownership",
-            "✗ Domain name not included",
-            "✗ Hosting not included",
-            "✗ Post-launch support not included"
+            "✓ Domain Name & Professional Email ($9–14/year)",
+            "✓ Hosting - $12–20/month",
+            "✓ Evolution : -20% on total days",
+            "✓ Support, Documentation & Training included"
           ],
           "cta": "Start Project",
           "featured": false,
@@ -224,37 +221,15 @@
           "period": null,
           "features": [
             "✓ Fixed price based on scope",
-            "✓ Guaranteed delivery timeline",
-            "✓ Domain name & SSL certificate included",
-            "✓ 2 years of hosting included",
-            "✓ Complete source code ownership",
-            "✓ 30 days post-launch support",
-            "✓ Documentation & training",
-            "✗ Ongoing maintenance not included"
+            "✓ Adjustable scope",
+            "✓ Domain Name & Professional Email (2 years included)",
+            "✓ Hosting (2 years included)",
+            "✓ Evolution : -10% discount",
+            "✓ Support, Documentation & Training included"
           ],
           "cta": "Get a Quote",
           "featured": true,
           "hasPromo": false
-        },
-        {
-          "name": "Partner",
-          "description": "Long-term partnership with continuous support",
-          "price": "$299",
-          "originalPrice": "$399",
-          "period": "per month",
-          "features": [
-            "✓ Monthly retainer model",
-            "✓ Domain & hosting fully managed",
-            "✓ Continuous feature development",
-            "✓ Priority support & maintenance",
-            "✓ Monthly strategy consultations",
-            "✓ Performance monitoring & optimization",
-            "✓ Unlimited revisions & updates",
-            "✓ Cancel anytime (no long-term contract)"
-          ],
-          "cta": "Become a Partner",
-          "featured": false,
-          "hasPromo": true
         }
       ]
     },

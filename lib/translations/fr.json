@@ -198,19 +198,16 @@
         {
           "name": "Base",
           "description": "Tarif journalier flexible pour développement agile",
-          "price": "99$",
-          "originalPrice": "159$",
+          "price": "80$",
+          "originalPrice": "100$",
           "period": "par jour (TJM)",
           "features": [
-            "✓ Tarif Journalier Moyen (TJM)",
             "✓ Durée d'engagement flexible",
-            "✓ Collaboration directe avec l'équipe",
             "✓ Développement itératif agile",
-            "✓ Mises à jour quotidiennes",
-            "✓ Propriété du code source",
-            "✗ Nom de domaine non inclus",
-            "✗ Hébergement non inclus",
-            "✗ Support post-lancement non inclus"
+            "✓ Nom de Domaine & Email Professionnel (9 à 14$/an)",
+            "✓ Hébergement - 12 à 20 $/mois",
+            "✓ Evolution : -20% de réduction sur total de jours",
+            "✓ Support, Documentation & Formation inclus"
           ],
           "cta": "Démarrer le Projet",
           "featured": false,
@@ -224,37 +221,15 @@
           "period": null,
           "features": [
             "✓ Prix fixe selon le périmètre",
-            "✓ Délai de livraison garanti",
-            "✓ Nom de domaine & certificat SSL inclus",
-            "✓ 2 ans d'hébergement inclus",
-            "✓ Propriété complète du code source",
-            "✓ Support post-lancement 30 jours",
-            "✓ Documentation & formation",
-            "✗ Maintenance continue non incluse"
+            "✓ Possibilité de réajustement",
+            "✓ Nom de domaine & Email Professionnel (2 ans inclus)",
+            "✓ Hébergement (2 ans inclus)",
+            "✓ Evolution : -10% de réduction",
+            "✓ Support, Documentation & Formation inclus"
           ],
           "cta": "Obtenir un Devis",
           "featured": true,
           "hasPromo": false
-        },
-        {
-          "name": "Partner",
-          "description": "Partenariat à long terme avec support continu",
-          "price": "299$",
-          "originalPrice": "399$",
-          "period": "par mois",
-          "features": [
-            "✓ Modèle de forfait mensuel",
-            "✓ Domaine & hébergement gérés",
-            "✓ Développement continu de fonctionnalités",
-            "✓ Support & maintenance prioritaires",
-            "✓ Consultations stratégiques mensuelles",
-            "✓ Surveillance & optimisation des performances",
-            "✓ Révisions & mises à jour illimitées",
-            "✓ Annulation à tout moment (sans engagement)"
-          ],
-          "cta": "Devenir Partenaire",
-          "featured": false,
-          "hasPromo": true
         }
       ]
     },

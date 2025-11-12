@@ -85,19 +85,12 @@ export default function ServicesPageClient({ translations }: ServicesPageClientP
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.pricing.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {t.pricing.plans.map((plan: any, index: number) => (
               <Card
                 key={index}
-                className={`border-0 shadow-lg rounded-xl overflow-hidden ${
-                  plan.featured ? 'ring-2 ring-orange-600 transform scale-105' : ''
-                }`}
+                className="border-0 shadow-lg rounded-xl overflow-hidden"
               >
-                {plan.featured && (
-                  <div className="bg-orange-600 text-white text-center py-2 text-sm font-semibold">
-                    {t.pricing.badge}
-                  </div>
-                )}
                 <CardHeader className="bg-white p-8 text-center">
                   <CardTitle className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</CardTitle>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
@@ -105,7 +98,7 @@ export default function ServicesPageClient({ translations }: ServicesPageClientP
                     {plan.hasPromo && plan.originalPrice && (
                       <div className="mb-2">
                         <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">
-                          {t.pricing.promoLabel}
+                          Promo
                         </span>
                         <div className="text-xl text-gray-400 line-through">
                           {plan.originalPrice}
