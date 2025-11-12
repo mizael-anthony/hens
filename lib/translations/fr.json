@@ -1,0 +1,267 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "legal": "Légal",
+    "getQuote": "Obtenir un devis"
+  },
+  "footer": {
+    "company": "Entreprise",
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "legal": "Mentions Légales",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "getInTouch": "Nous contacter",
+    "rights": "Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "title": "Construire les",
+      "titleAccent": "Solutions Numériques de Demain",
+      "subtitle": "Spécialisés dans le développement web et mobile, la création d'API et l'intégration IA. Nous transformons vos idées en solutions technologiques puissantes et évolutives.",
+      "cta": "Obtenir un devis"
+    },
+    "services": {
+      "title": "Notre Expertise",
+      "subtitle": "Solutions technologiques complètes adaptées aux besoins de votre entreprise",
+      "web": {
+        "title": "Développement Web",
+        "description": "Sites web et applications web modernes et responsives construits avec des technologies de pointe."
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "description": "Applications mobiles natives et multiplateformes pour iOS et Android."
+      },
+      "api": {
+        "title": "Création d'API",
+        "description": "APIs robustes et évolutives qui alimentent vos applications et s'intègrent parfaitement."
+      },
+      "ai": {
+        "title": "Intégration IA",
+        "description": "Solutions intelligentes qui exploitent l'apprentissage automatique et l'intelligence artificielle."
+      }
+    },
+    "stats": {
+      "title": "Approuvé par des Entreprises Visionnaires",
+      "projects": "Projets Réalisés",
+      "clients": "Clients Satisfaits",
+      "experience": "Années d'Expérience",
+      "satisfaction": "Satisfaction Client"
+    },
+    "technologies": {
+      "title": "Technologies Utilisées",
+      "subtitle": "Nous travaillons avec des technologies modernes et reconnues pour fournir des solutions robustes et évolutives."
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Obtenez des réponses aux questions courantes sur nos services et notre processus de développement.",
+      "items": [
+        {
+          "question": "Combien de temps prend le développement d'un MVP ?",
+          "answer": "Notre processus de développement MVP prend généralement 60 jours en moyenne à partir de la signature du contrat. Ce délai optimisé garantit une mise sur le marché rapide tout en maintenant des standards de qualité élevés."
+        },
+        {
+          "question": "Fournissez-vous un support et une maintenance continus ?",
+          "answer": "Oui, nous offrons des packages complets de support et maintenance pour garantir que votre application reste sécurisée, à jour et performante. Nos services incluent des mises à jour régulières, des correctifs de sécurité, la surveillance des performances et un support technique dédié."
+        },
+        {
+          "question": "Que faire si je n'ai pas une vision claire de mon projet ?",
+          "answer": "Absolument. Nous nous spécialisons dans les ateliers de découverte et l'analyse des exigences. Notre équipe travaillera étroitement avec vous pour définir la portée de votre projet, identifier les objectifs clés et développer une stratégie de solution complète qui dépasse vos attentes."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à Démarrer Votre Projet ?",
+      "subtitle": "Discutons de la façon dont nous pouvons vous aider à concrétiser votre vision avec des solutions technologiques de pointe.",
+      "button": "Commencer Aujourd'hui"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "À Propos de Hens",
+      "subtitle": "Nous sommes des technologues passionnés dédiés à transformer les entreprises grâce à des solutions numériques innovantes."
+    },
+    "founder": {
+      "title": "Rencontrez Notre Fondateur",
+      "name": "RAKOTOMANGA Mamy Henintsoa Anthony",
+      "role": "Fondateur & Développeur Principal",
+      "bio": "Avec plus de 5 ans d'expérience en développement logiciel, M. Anthony a fondé Hens avec la vision d'aider les entreprises à exploiter la technologie de pointe pour atteindre leurs objectifs. Son expertise couvre le développement full-stack, l'intégration IA et l'architecture de systèmes évolutifs.",
+      "quote": "\"La technologie devrait autonomiser les entreprises, pas les compliquer. C'est pourquoi nous nous concentrons sur la création de solutions à la fois puissantes et intuitives.\""
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Les principes qui guident tout ce que nous faisons",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous restons à la pointe de la technologie, explorant constamment de nouvelles solutions et méthodologies."
+      },
+      "quality": {
+        "title": "Qualité",
+        "description": "Nous livrons des résultats exceptionnels grâce à des tests rigoureux, aux meilleures pratiques et à l'attention aux détails."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Nous travaillons étroitement avec nos clients en tant que partenaires, assurant une communication transparente."
+      }
+    },
+    "process": {
+      "title": "Notre Processus de Développement",
+      "subtitle": "Une méthodologie éprouvée qui garantit la qualité, la transparence et la livraison dans les délais.",
+      "steps": [
+        {
+          "title": "Découverte & Planification",
+          "description": "Nous analysons vos exigences et créons une feuille de route détaillée du projet."
+        },
+        {
+          "title": "Design & Prototypage",
+          "description": "Créer des wireframes et des prototypes pour visualiser la solution finale."
+        },
+        {
+          "title": "Développement & Tests",
+          "description": "Construire votre solution en utilisant les meilleures pratiques et des tests rigoureux."
+        },
+        {
+          "title": "Déploiement & Support",
+          "description": "Lancer votre projet et fournir une maintenance et un support continus."
+        }
+      ]
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Autonomiser les entreprises avec des solutions technologiques innovantes qui stimulent la croissance, l'efficacité et l'avantage concurrentiel à l'ère numérique."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Être le partenaire technologique de confiance pour les entreprises du monde entier, reconnu pour livrer des solutions numériques transformatrices qui dépassent les attentes."
+    },
+    "cta": {
+      "title": "Travaillons Ensemble",
+      "subtitle": "Prêt à transformer votre entreprise avec des solutions technologiques innovantes ?",
+      "button": "Démarrer Votre Projet"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Nos Services",
+      "subtitle": "Solutions technologiques complètes conçues pour accélérer la croissance de votre entreprise et votre transformation numérique."
+    },
+    "services": {
+      "web": {
+        "title": "Développement Web",
+        "description": "Créez des applications web puissantes et responsives qui offrent des expériences utilisateur exceptionnelles et génèrent des résultats commerciaux.",
+        "features": [
+          "Applications SaaS",
+          "Applications Web Progressives (PWA)",
+          "Optimisation SEO"
+        ]
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "description": "Construisez des applications mobiles natives et multiplateformes qui engagent les utilisateurs et étendent votre portée sur tous les appareils.",
+        "features": [
+          "Apps iOS & Android",
+          "Fonctionnalité Hors Ligne",
+          "Publication App Store"
+        ]
+      },
+      "api": {
+        "title": "Développement d'API",
+        "description": "Concevez et développez des API robustes et évolutives qui alimentent vos applications et permettent des intégrations transparentes.",
+        "features": [
+          "Design d'API RESTful",
+          "Implémentation GraphQL",
+          "Intégrations Tierces"
+        ]
+      },
+      "ai": {
+        "title": "Intégration IA",
+        "description": "Intégrez de puissants modèles de langage (LLM) et services IA pour automatiser les processus et obtenir des avantages concurrentiels.",
+        "features": [
+          "Intégration LLM",
+          "Chatbots & Assistants Virtuels",
+          "Automatisation Alimentée par IA"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Tarif",
+      "subtitle": "Choisissez le plan qui correspond le mieux aux besoins et au budget de votre projet.",
+      "badge": "LE PLUS POPULAIRE",
+      "promoLabel": "Offre Limitée",
+      "plans": [
+        {
+          "name": "Base",
+          "description": "Tarif journalier flexible pour développement agile",
+          "price": "99$",
+          "originalPrice": "159$",
+          "period": "par jour (TJM)",
+          "features": [
+            "✓ Tarif Journalier Moyen (TJM)",
+            "✓ Durée d'engagement flexible",
+            "✓ Collaboration directe avec l'équipe",
+            "✓ Développement itératif agile",
+            "✓ Mises à jour quotidiennes",
+            "✓ Propriété du code source",
+            "✗ Nom de domaine non inclus",
+            "✗ Hébergement non inclus",
+            "✗ Support post-lancement non inclus"
+          ],
+          "cta": "Démarrer le Projet",
+          "featured": false,
+          "hasPromo": true
+        },
+        {
+          "name": "Premium",
+          "description": "Solution clé en main complète pour votre projet",
+          "price": "Devis sur mesure",
+          "originalPrice": null,
+          "period": null,
+          "features": [
+            "✓ Prix fixe selon le périmètre",
+            "✓ Délai de livraison garanti",
+            "✓ Nom de domaine & certificat SSL inclus",
+            "✓ 2 ans d'hébergement inclus",
+            "✓ Propriété complète du code source",
+            "✓ Support post-lancement 30 jours",
+            "✓ Documentation & formation",
+            "✗ Maintenance continue non incluse"
+          ],
+          "cta": "Obtenir un Devis",
+          "featured": true,
+          "hasPromo": false
+        },
+        {
+          "name": "Partner",
+          "description": "Partenariat à long terme avec support continu",
+          "price": "299$",
+          "originalPrice": "399$",
+          "period": "par mois",
+          "features": [
+            "✓ Modèle de forfait mensuel",
+            "✓ Domaine & hébergement gérés",
+            "✓ Développement continu de fonctionnalités",
+            "✓ Support & maintenance prioritaires",
+            "✓ Consultations stratégiques mensuelles",
+            "✓ Surveillance & optimisation des performances",
+            "✓ Révisions & mises à jour illimitées",
+            "✓ Annulation à tout moment (sans engagement)"
+          ],
+          "cta": "Devenir Partenaire",
+          "featured": false,
+          "hasPromo": true
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à Commencer ?",
+      "subtitle": "Discutons de vos exigences de projet et créons une solution qui dépasse vos attentes.",
+      "button": "Démarrer Votre Projet"
+    }
+  }
+}

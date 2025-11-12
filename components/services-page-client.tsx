@@ -102,10 +102,22 @@ export default function ServicesPageClient({ translations }: ServicesPageClientP
                   <CardTitle className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</CardTitle>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    {plan.period && (
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
+                    {plan.hasPromo && plan.originalPrice && (
+                      <div className="mb-2">
+                        <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                          {t.pricing.promoLabel}
+                        </span>
+                        <div className="text-xl text-gray-400 line-through">
+                          {plan.originalPrice}
+                        </div>
+                      </div>
                     )}
+                    <div>
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      {plan.period && (
+                        <span className="text-gray-600 ml-2">{plan.period}</span>
+                      )}
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-8">

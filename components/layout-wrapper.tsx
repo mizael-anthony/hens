@@ -25,21 +25,25 @@ interface LayoutWrapperProps {
 }
 
 export default function LayoutWrapper({ children }: LayoutWrapperProps) {
-  // Initialize language from localStorage or default to "en"
-  const [currentLang, setCurrentLang] = useState<Language>(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("language")
-      return (stored as Language) || "en"
+  // Always initialize with "en" for SSR to avoid hydration mismatch
+  const [currentLang, setCurrentLang] = useState<Language>("en")
+  const [isHydrated, setIsHydrated] = useState(false)
+
+  // Load language from localStorage after component mounts (client-side only)
+  useEffect(() => {
+    const stored = localStorage.getItem("language")
+    if (stored && (stored === "en" || stored === "fr")) {
+      setCurrentLang(stored as Language)
     }
-    return "en"
-  })
+    setIsHydrated(true)
+  }, [])
 
   // Persist language to localStorage whenever it changes
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (isHydrated) {
       localStorage.setItem("language", currentLang)
     }
-  }, [currentLang])
+  }, [currentLang, isHydrated])
 
   return (
     <LanguageContext.Provider value={{ currentLang, setLanguage: setCurrentLang }}>

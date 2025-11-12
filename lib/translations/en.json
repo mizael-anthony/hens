@@ -1,0 +1,267 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "legal": "Legal",
+    "getQuote": "Get a Quote"
+  },
+  "footer": {
+    "company": "Company",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "getInTouch": "Get in Touch",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "Building Tomorrow's",
+      "titleAccent": "Digital Solutions",
+      "subtitle": "Specialized in web & mobile development, API creation, and AI integration. We transform your ideas into powerful, scalable technology solutions.",
+      "cta": "Get a Quote"
+    },
+    "services": {
+      "title": "Our Expertise",
+      "subtitle": "Comprehensive technology solutions tailored to your business needs",
+      "web": {
+        "title": "Web Development",
+        "description": "Modern, responsive websites and web applications built with cutting-edge technologies."
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "Native and cross-platform mobile applications for iOS and Android."
+      },
+      "api": {
+        "title": "API Creation",
+        "description": "Robust, scalable APIs that power your applications and integrate seamlessly."
+      },
+      "ai": {
+        "title": "AI Integration",
+        "description": "Intelligent solutions that integrate Large Language Models (LLMs) and AI services into your applications."
+      }
+    },
+    "stats": {
+      "title": "Trusted by Forward-Thinking Companies",
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "experience": "Years Experience",
+      "satisfaction": "Client Satisfaction"
+    },
+    "technologies": {
+      "title": "Technologies We Use",
+      "subtitle": "We work with modern, industry-leading technologies to deliver robust and scalable solutions."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Get answers to common questions about our services and development process.",
+      "items": [
+        {
+          "question": "How long does an MVP development take?",
+          "answer": "Our MVP development process typically takes 60 days in average from contract signature. This streamlined timeline ensures rapid time-to-market while maintaining high quality standards."
+        },
+        {
+          "question": "Do you provide ongoing support and maintenance?",
+          "answer": "Yes, we offer comprehensive support and maintenance packages to ensure your application remains secure, up-to-date, and performing optimally. Our services include regular updates, security patches, performance monitoring, and dedicated technical support."
+        },
+        {
+          "question": "What if I don't have a clear project vision?",
+          "answer": "Absolutely. We specialize in discovery workshops and requirements analysis. Our team will work closely with you to define your project scope, identify key objectives, and develop a comprehensive solution strategy that exceeds your expectations."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Let's discuss how we can help bring your vision to life with cutting-edge technology solutions.",
+      "button": "Get Started Today"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Hens",
+      "subtitle": "We are passionate technologists dedicated to transforming businesses through innovative digital solutions."
+    },
+    "founder": {
+      "title": "Meet Our Founder",
+      "name": "RAKOTOMANGA Mamy Henintsoa Anthony",
+      "role": "Founder & Lead Developer",
+      "bio": "With over 5 years of experience in software development, M. Anthony founded Hens with a vision to help businesses leverage cutting-edge technology to achieve their goals. His expertise spans full-stack development, AI integration, and scalable system architecture.",
+      "quote": "\"Technology should empower businesses, not complicate them. That's why we focus on creating solutions that are both powerful and intuitive.\""
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide everything we do",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We stay at the forefront of technology, constantly exploring new solutions and methodologies."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "We deliver exceptional results through rigorous testing, best practices, and attention to detail."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "We work closely with our clients as partners, ensuring transparent communication throughout."
+      }
+    },
+    "process": {
+      "title": "Our Development Process",
+      "subtitle": "A proven methodology that ensures quality, transparency, and timely delivery.",
+      "steps": [
+        {
+          "title": "Discovery & Planning",
+          "description": "We analyze your requirements and create a detailed project roadmap."
+        },
+        {
+          "title": "Design & Prototyping",
+          "description": "Create wireframes and prototypes to visualize the final solution."
+        },
+        {
+          "title": "Development & Testing",
+          "description": "Build your solution using best practices and rigorous testing."
+        },
+        {
+          "title": "Deployment & Support",
+          "description": "Launch your project and provide ongoing maintenance and support."
+        }
+      ]
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital age."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the trusted technology partner for businesses worldwide, known for delivering transformative digital solutions that exceed expectations."
+    },
+    "cta": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to transform your business with innovative technology solutions?",
+      "button": "Start Your Project"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive technology solutions designed to accelerate your business growth and digital transformation."
+    },
+    "services": {
+      "web": {
+        "title": "Web Development",
+        "description": "Create powerful, responsive web applications that deliver exceptional user experiences and drive business results.",
+        "features": [
+          "SaaS Applications",
+          "Progressive Web Apps (PWA)",
+          "SEO Optimization"
+        ]
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "Build native and cross-platform mobile applications that engage users and expand your reach across all devices.",
+        "features": [
+          "iOS & Android Apps",
+          "Offline Functionality",
+          "App Store Publishing"
+        ]
+      },
+      "api": {
+        "title": "API Development",
+        "description": "Design and develop robust, scalable APIs that power your applications and enable seamless integrations.",
+        "features": [
+          "RESTful API Design",
+          "GraphQL Implementation",
+          "Third-party Integrations"
+        ]
+      },
+      "ai": {
+        "title": "AI Integration",
+        "description": "Integrate powerful Large Language Models and AI services to automate processes and gain competitive advantages.",
+        "features": [
+          "LLM Integration",
+          "Chatbots & Virtual Assistants",
+          "AI-powered Automation"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "Choose the plan that best fits your project needs and budget.",
+      "badge": "MOST POPULAR",
+      "promoLabel": "Limited Time Offer",
+      "plans": [
+        {
+          "name": "Base",
+          "description": "Flexible daily rate for agile development",
+          "price": "$99",
+          "originalPrice": "$159",
+          "period": "per day (ADR)",
+          "features": [
+            "✓ Average Daily Rate (ADR) pricing",
+            "✓ Flexible engagement duration",
+            "✓ Direct collaboration with our team",
+            "✓ Agile iterative development",
+            "✓ Daily progress updates",
+            "✓ Source code ownership",
+            "✗ Domain name not included",
+            "✗ Hosting not included",
+            "✗ Post-launch support not included"
+          ],
+          "cta": "Start Project",
+          "featured": false,
+          "hasPromo": true
+        },
+        {
+          "name": "Premium",
+          "description": "Complete turnkey solution for your project",
+          "price": "Custom Quote",
+          "originalPrice": null,
+          "period": null,
+          "features": [
+            "✓ Fixed price based on scope",
+            "✓ Guaranteed delivery timeline",
+            "✓ Domain name & SSL certificate included",
+            "✓ 2 years of hosting included",
+            "✓ Complete source code ownership",
+            "✓ 30 days post-launch support",
+            "✓ Documentation & training",
+            "✗ Ongoing maintenance not included"
+          ],
+          "cta": "Get a Quote",
+          "featured": true,
+          "hasPromo": false
+        },
+        {
+          "name": "Partner",
+          "description": "Long-term partnership with continuous support",
+          "price": "$299",
+          "originalPrice": "$399",
+          "period": "per month",
+          "features": [
+            "✓ Monthly retainer model",
+            "✓ Domain & hosting fully managed",
+            "✓ Continuous feature development",
+            "✓ Priority support & maintenance",
+            "✓ Monthly strategy consultations",
+            "✓ Performance monitoring & optimization",
+            "✓ Unlimited revisions & updates",
+            "✓ Cancel anytime (no long-term contract)"
+          ],
+          "cta": "Become a Partner",
+          "featured": false,
+          "hasPromo": true
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let's discuss your project requirements and create a solution that exceeds your expectations.",
+      "button": "Start Your Project"
+    }
+  }
+}

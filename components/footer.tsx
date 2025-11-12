@@ -4,40 +4,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { COMPANY_INFO } from "@/lib/company-constants"
+import { getFooterTranslations, type Language } from "@/lib/translations"
 
 interface FooterProps {
-  currentLang: "en" | "fr"
-}
-
-const translations = {
-  en: {
-    company: "Company",
-    home: "Home",
-    services: "Services",
-    about: "About",
-    contact: "Contact",
-    legal: "Legal Notice",
-    privacy: "Privacy Policy",
-    terms: "Terms of Service",
-    getInTouch: "Get in Touch",
-    rights: "All rights reserved.",
-  },
-  fr: {
-    company: "Entreprise",
-    home: "Accueil",
-    services: "Services",
-    about: "À propos",
-    contact: "Contact",
-    legal: "Mentions Légales",
-    privacy: "Politique de Confidentialité",
-    terms: "Conditions d'Utilisation",
-    getInTouch: "Nous contacter",
-    rights: "Tous droits réservés.",
-  },
+  currentLang: Language
 }
 
 export default function Footer({ currentLang }: FooterProps) {
-  const t = translations[currentLang]
+  const t = getFooterTranslations(currentLang)
 
   return (
     <footer className="bg-gray-900 text-white">

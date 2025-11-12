@@ -5,36 +5,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getNavigationTranslations, type Language } from "@/lib/translations"
 
 interface NavigationProps {
-  currentLang: "en" | "fr"
-  onLanguageChange: (lang: "en" | "fr") => void
-}
-
-const translations = {
-  en: {
-    home: "Home",
-    services: "Services",
-    about: "About",
-    blog: "Blog",
-    contact: "Contact",
-    legal: "Legal",
-    getQuote: "Get a Quote",
-  },
-  fr: {
-    home: "Accueil",
-    services: "Services",
-    about: "À propos",
-    blog: "Blog",
-    contact: "Contact",
-    legal: "Légal",
-    getQuote: "Obtenir un devis",
-  },
+  currentLang: Language
+  onLanguageChange: (lang: Language) => void
 }
 
 export default function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const t = translations[currentLang]
+  const t = getNavigationTranslations(currentLang)
 
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
