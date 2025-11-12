@@ -1,61 +1,75 @@
-"use client"
+"use client";
 
-import { use } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { useLanguage } from "@/components/layout-wrapper"
-import { getBlogPost, getBlogPosts } from "@/lib/blog-data"
+import { use } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowLeft, Calendar, Clock, User, Tag, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/components/layout-wrapper";
+import { getBlogPost, getBlogPosts } from "@/lib/blog-data";
 
 interface BlogPostClientProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
   translations: {
-    en: any
-    fr: any
-  }
+    en: any;
+    fr: any;
+  };
 }
 
-export default function BlogPostClient({ params, translations }: BlogPostClientProps) {
-  const { slug } = use(params)
-  const { currentLang } = useLanguage()
-  const t = translations[currentLang]
+export default function BlogPostClient({
+  params,
+  translations,
+}: BlogPostClientProps) {
+  const { slug } = use(params);
+  const { currentLang } = useLanguage();
+  const t = translations[currentLang];
 
-  const post = getBlogPost(slug, currentLang)
-  const allPosts = getBlogPosts(currentLang)
+  const post = getBlogPost(slug, currentLang);
+  const allPosts = getBlogPosts(currentLang);
 
   if (!post) {
     return (
       <div className="bg-white min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t.notFound.title}</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {t.notFound.title}
+          </h1>
           <p className="text-xl text-gray-600 mb-8">{t.notFound.description}</p>
-          <Button asChild className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6 py-3">
+          <Button
+            asChild
+            className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-6 py-3"
+          >
             <Link href="/blog">{t.notFound.backToBlog}</Link>
           </Button>
         </div>
       </div>
-    )
+    );
   }
 
-  const relatedPosts = allPosts.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 3)
+  const relatedPosts = allPosts
+    .filter((p) => p.id !== post.id && p.category === post.category)
+    .slice(0, 3);
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
+    const date = new Date(dateString);
     return date.toLocaleDateString(currentLang === "fr" ? "fr-FR" : "en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
-    })
-  }
+    });
+  };
 
   return (
     <div className="bg-white">
       {/* Header */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Button asChild variant="ghost" className="mb-8 text-orange-600 hover:text-orange-700 hover:bg-orange-50">
+          <Button
+            asChild
+            variant="ghost"
+            className="mb-8 text-orange-600 hover:text-orange-700 hover:bg-orange-50"
+          >
             <Link href="/blog" className="flex items-center">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t.backToBlog}
@@ -77,18 +91,29 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
                 {t.by} {post.author}
               </span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{post.title}</h1>
-            <p className="text-xl text-gray-600 leading-relaxed">{post.excerpt}</p>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              {post.title}
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              {post.excerpt}
+            </p>
           </div>
 
           {/* Featured Image */}
           <div className="relative h-96 rounded-xl overflow-hidden mb-8">
-            <Image src={post.image || "/images/standard.png"} alt={post.title} fill className="object-cover" />
+            <Image
+              src={post.image || "/images/standard.png"}
+              alt={post.title}
+              fill
+              className="object-cover"
+            />
           </div>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-8">
-            <span className="text-sm font-medium text-gray-700 mr-2">{t.tags}:</span>
+            <span className="text-sm font-medium text-gray-700 mr-2">
+              {t.tags}:
+            </span>
             {post.tags.map((tag) => (
               <span
                 key={tag}
@@ -108,7 +133,9 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
           <div className="prose prose-lg max-w-none">
             <div
               className="text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, "<br />") }}
+              dangerouslySetInnerHTML={{
+                __html: post.content.replace(/\n/g, "<br />"),
+              }}
             />
           </div>
 
@@ -116,7 +143,9 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                <span className="text-lg font-semibold text-gray-900">{t.share}</span>
+                <span className="text-lg font-semibold text-gray-900">
+                  {t.share}
+                </span>
                 <Button
                   variant="outline"
                   size="sm"
@@ -126,7 +155,11 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
                   Share
                 </Button>
               </div>
-              <Button asChild variant="ghost" className="text-orange-600 hover:text-orange-700 hover:bg-orange-50">
+              <Button
+                asChild
+                variant="ghost"
+                className="text-orange-600 hover:text-orange-700 hover:bg-orange-50"
+              >
                 <Link href="/blog" className="flex items-center">
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   {t.backToBlog}
@@ -141,7 +174,9 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
       {relatedPosts.length > 0 && (
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">{t.relatedPosts}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              {t.relatedPosts}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
                 <Card
@@ -168,9 +203,13 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                      <Link href={`/blog/${relatedPost.id}`}>{relatedPost.title}</Link>
+                      <Link href={`/blog/${relatedPost.id}`}>
+                        {relatedPost.title}
+                      </Link>
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{relatedPost.excerpt}</p>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {relatedPost.excerpt}
+                    </p>
                     <Button
                       asChild
                       variant="ghost"
@@ -187,5 +226,5 @@ export default function BlogPostClient({ params, translations }: BlogPostClientP
         </section>
       )}
     </div>
-  )
+  );
 }

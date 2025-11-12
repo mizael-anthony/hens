@@ -1,32 +1,34 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/components/layout-wrapper"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/layout-wrapper";
 
 interface CTATranslations {
-  title: string
-  subtitle: string
-  button: string
+  title: string;
+  subtitle: string;
+  button: string;
 }
 
 interface CTASectionProps {
   translations: {
-    en: CTATranslations
-    fr: CTATranslations
-  }
+    en: CTATranslations;
+    fr: CTATranslations;
+  };
 }
 
 export default function CTASection({ translations }: CTASectionProps) {
-  const { currentLang } = useLanguage()
-  const t = translations[currentLang]
+  const { currentLang } = useLanguage();
+  const t = translations[currentLang];
 
   return (
     <section className="py-20 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">{t.title}</h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{t.subtitle}</p>
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          {t.subtitle}
+        </p>
         <Button
           asChild
           size="lg"
@@ -39,5 +41,5 @@ export default function CTASection({ translations }: CTASectionProps) {
         </Button>
       </div>
     </section>
-  )
+  );
 }

@@ -1,32 +1,37 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronDown, ChevronUp } from "lucide-react"
-import { useLanguage } from "@/components/layout-wrapper"
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { useLanguage } from "@/components/layout-wrapper";
 
 interface FAQItem {
-  question: string
-  answer: string
+  question: string;
+  answer: string;
 }
 
 interface FAQTranslations {
-  title: string
-  subtitle: string
-  items: FAQItem[]
+  title: string;
+  subtitle: string;
+  items: FAQItem[];
 }
 
 interface FAQSectionProps {
   translations: {
-    en: FAQTranslations
-    fr: FAQTranslations
-  }
+    en: FAQTranslations;
+    fr: FAQTranslations;
+  };
 }
 
-function FAQItem({ question, answer, isOpen, onToggle }: {
-  question: string
-  answer: string
-  isOpen: boolean
-  onToggle: () => void
+function FAQItem({
+  question,
+  answer,
+  isOpen,
+  onToggle,
+}: {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
   return (
     <div className="border-b border-gray-200 last:border-b-0">
@@ -47,24 +52,22 @@ function FAQItem({ question, answer, isOpen, onToggle }: {
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default function FAQSection({ translations }: FAQSectionProps) {
-  const { currentLang } = useLanguage()
-  const t = translations[currentLang]
-  const [openItems, setOpenItems] = useState<number[]>([])
+  const { currentLang } = useLanguage();
+  const t = translations[currentLang];
+  const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    )
-  }
+    setOpenItems((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
+    );
+  };
 
   if (!t || !t.title || !t.items) {
-    return null
+    return null;
   }
 
   return (
@@ -95,5 +98,5 @@ export default function FAQSection({ translations }: FAQSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }

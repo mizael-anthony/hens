@@ -1,22 +1,22 @@
 export interface BlogPost {
-  id: string
-  title: string
-  excerpt: string
-  content: string
-  author: string
-  publishedAt: string
-  readTime: number
-  category: string
-  tags: string[]
-  featured: boolean
-  image: string
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+  readTime: number;
+  category: string;
+  tags: string[];
+  featured: boolean;
+  image: string;
 }
 
 export interface BlogCategory {
-  id: string
-  name: string
-  description: string
-  count: number
+  id: string;
+  name: string;
+  description: string;
+  count: number;
 }
 
 // Sample blog data
@@ -57,13 +57,15 @@ export const blogCategories: Record<string, BlogCategory[]> = {
     {
       id: "web-development",
       name: "Développement Web",
-      description: "Dernières tendances et meilleures pratiques en développement web",
+      description:
+        "Dernières tendances et meilleures pratiques en développement web",
       count: 8,
     },
     {
       id: "mobile-development",
       name: "Développement Mobile",
-      description: "Insights et tutoriels de développement d'applications mobiles",
+      description:
+        "Insights et tutoriels de développement d'applications mobiles",
       count: 6,
     },
     {
@@ -75,7 +77,8 @@ export const blogCategories: Record<string, BlogCategory[]> = {
     {
       id: "ai-integration",
       name: "Intégration IA",
-      description: "Applications d'intelligence artificielle et d'apprentissage automatique",
+      description:
+        "Applications d'intelligence artificielle et d'apprentissage automatique",
       count: 4,
     },
     {
@@ -85,7 +88,7 @@ export const blogCategories: Record<string, BlogCategory[]> = {
       count: 7,
     },
   ],
-}
+};
 
 export const blogPosts: Record<string, BlogPost[]> = {
   en: [
@@ -204,7 +207,8 @@ Building scalable APIs requires careful planning and adherence to best practices
     {
       id: "mobile-app-development-react-native-vs-flutter",
       title: "Mobile App Development: React Native vs Flutter in 2024",
-      excerpt: "A comprehensive comparison of React Native and Flutter for cross-platform mobile development.",
+      excerpt:
+        "A comprehensive comparison of React Native and Flutter for cross-platform mobile development.",
       content: `
 # Mobile App Development: React Native vs Flutter in 2024
 
@@ -320,7 +324,8 @@ AI integration doesn't have to be overwhelming. Start with clear objectives, cho
     {
       id: "web-performance-optimization-techniques",
       title: "Web Performance Optimization: Techniques That Actually Work",
-      excerpt: "Proven strategies to improve your website's loading speed and user experience.",
+      excerpt:
+        "Proven strategies to improve your website's loading speed and user experience.",
       content: `
 # Web Performance Optimization: Techniques That Actually Work
 
@@ -445,7 +450,8 @@ Rester à jour avec ces tendances est crucial pour livrer des applications web m
     },
     {
       id: "construction-apis-evolutives-meilleures-pratiques",
-      title: "Construction d'APIs Évolutives : Meilleures Pratiques et Modèles de Conception",
+      title:
+        "Construction d'APIs Évolutives : Meilleures Pratiques et Modèles de Conception",
       excerpt:
         "Apprenez les modèles et pratiques essentiels pour créer des APIs qui peuvent gérer la croissance et maintenir les performances.",
       content: `
@@ -498,36 +504,42 @@ Construire des APIs évolutives nécessite une planification soigneuse et l'adh�
       image: "/images/standard.png?height=400&width=600",
     },
   ],
-}
+};
 
 export function getBlogPosts(lang: "en" | "fr"): BlogPost[] {
-  return blogPosts[lang] || []
+  return blogPosts[lang] || [];
 }
 
-export function getBlogPost(id: string, lang: "en" | "fr"): BlogPost | undefined {
-  return getBlogPosts(lang).find((post) => post.id === id)
+export function getBlogPost(
+  id: string,
+  lang: "en" | "fr",
+): BlogPost | undefined {
+  return getBlogPosts(lang).find((post) => post.id === id);
 }
 
 export function getBlogCategories(lang: "en" | "fr"): BlogCategory[] {
-  return blogCategories[lang] || []
+  return blogCategories[lang] || [];
 }
 
 export function getFeaturedPosts(lang: "en" | "fr"): BlogPost[] {
-  return getBlogPosts(lang).filter((post) => post.featured)
+  return getBlogPosts(lang).filter((post) => post.featured);
 }
 
-export function getPostsByCategory(category: string, lang: "en" | "fr"): BlogPost[] {
-  return getBlogPosts(lang).filter((post) => post.category === category)
+export function getPostsByCategory(
+  category: string,
+  lang: "en" | "fr",
+): BlogPost[] {
+  return getBlogPosts(lang).filter((post) => post.category === category);
 }
 
 export function searchPosts(query: string, lang: "en" | "fr"): BlogPost[] {
-  const posts = getBlogPosts(lang)
-  const lowercaseQuery = query.toLowerCase()
+  const posts = getBlogPosts(lang);
+  const lowercaseQuery = query.toLowerCase();
 
   return posts.filter(
     (post) =>
       post.title.toLowerCase().includes(lowercaseQuery) ||
       post.excerpt.toLowerCase().includes(lowercaseQuery) ||
       post.tags.some((tag) => tag.toLowerCase().includes(lowercaseQuery)),
-  )
+  );
 }

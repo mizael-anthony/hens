@@ -1,35 +1,40 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface LegalNavigationProps {
-  navigationTitle: string
+  navigationTitle: string;
   sections: {
-    company: string
-    terms: string
-    privacy: string
-  }
+    company: string;
+    terms: string;
+    privacy: string;
+  };
 }
 
-export default function LegalNavigation({ navigationTitle, sections }: LegalNavigationProps) {
+export default function LegalNavigation({
+  navigationTitle,
+  sections,
+}: LegalNavigationProps) {
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 120
-      const elementPosition = element.offsetTop
-      const offsetPosition = elementPosition - headerOffset
+      const headerOffset = 120;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
-      })
+        behavior: "smooth",
+      });
     }
-  }
+  };
 
   return (
     <Card className="border-0 shadow-lg rounded-xl sticky top-24">
       <CardHeader className="p-6">
-        <CardTitle className="text-lg font-bold text-gray-900">{navigationTitle}</CardTitle>
+        <CardTitle className="text-lg font-bold text-gray-900">
+          {navigationTitle}
+        </CardTitle>
       </CardHeader>
       <CardContent className="p-6 pt-0">
         <nav className="space-y-3">
@@ -54,5 +59,5 @@ export default function LegalNavigation({ navigationTitle, sections }: LegalNavi
         </nav>
       </CardContent>
     </Card>
-  )
+  );
 }

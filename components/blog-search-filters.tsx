@@ -1,39 +1,45 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Search, Filter } from "lucide-react"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useState } from "react";
+import { Search, Filter } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface BlogSearchFiltersProps {
-  searchQuery: string
-  setSearchQuery: (query: string) => void
-  selectedCategory: string
-  setSelectedCategory: (category: string) => void
-  filterType: string
-  setFilterType: (type: string) => void
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
+  filterType: string;
+  setFilterType: (type: string) => void;
   categories: Array<{
-    id: string
-    name: string
-    count: number
-    description: string
-  }>
+    id: string;
+    name: string;
+    count: number;
+    description: string;
+  }>;
   translations: {
     search: {
-      placeholder: string
-      button: string
-    }
+      placeholder: string;
+      button: string;
+    };
     filters: {
-      category: string
-      featured: string
-      recent: string
-    }
+      category: string;
+      featured: string;
+      recent: string;
+    };
     categories: {
-      title: string
-    }
-  }
+      title: string;
+    };
+  };
 }
 
 export default function BlogSearchFilters({
@@ -44,7 +50,7 @@ export default function BlogSearchFilters({
   filterType,
   setFilterType,
   categories,
-  translations: t
+  translations: t,
 }: BlogSearchFiltersProps) {
   return (
     <div className="lg:col-span-1 space-y-8">
@@ -65,7 +71,10 @@ export default function BlogSearchFilters({
               onChange={(e) => setSearchQuery(e.target.value)}
               className="rounded-lg border-gray-300 focus:border-orange-500 focus:ring-orange-500"
             />
-            <Button size="sm" className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-4">
+            <Button
+              size="sm"
+              className="bg-orange-600 hover:bg-orange-700 text-white rounded-lg px-4"
+            >
               <Search className="w-4 h-4" />
             </Button>
           </div>
@@ -82,8 +91,13 @@ export default function BlogSearchFilters({
         </CardHeader>
         <CardContent className="p-6 pt-0 space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Category
+            </label>
+            <Select
+              value={selectedCategory}
+              onValueChange={setSelectedCategory}
+            >
               <SelectTrigger className="rounded-lg border-gray-300 focus:border-orange-500 focus:ring-orange-500">
                 <SelectValue />
               </SelectTrigger>
@@ -98,7 +112,9 @@ export default function BlogSearchFilters({
             </Select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Type</label>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Type
+            </label>
             <Select value={filterType} onValueChange={setFilterType}>
               <SelectTrigger className="rounded-lg border-gray-300 focus:border-orange-500 focus:ring-orange-500">
                 <SelectValue />
@@ -116,7 +132,9 @@ export default function BlogSearchFilters({
       {/* Categories */}
       <Card className="border-0 shadow-lg rounded-xl">
         <CardHeader className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900">{t.categories.title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900">
+            {t.categories.title}
+          </h3>
         </CardHeader>
         <CardContent className="p-6 pt-0">
           <div className="space-y-3">
@@ -132,14 +150,18 @@ export default function BlogSearchFilters({
               >
                 <div className="flex justify-between items-center">
                   <span className="font-medium">{category.name}</span>
-                  <span className="text-sm text-gray-400">({category.count})</span>
+                  <span className="text-sm text-gray-400">
+                    ({category.count})
+                  </span>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">{category.description}</p>
+                <p className="text-sm text-gray-500 mt-1">
+                  {category.description}
+                </p>
               </button>
             ))}
           </div>
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

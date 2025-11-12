@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Mail, Phone, MapPin } from "lucide-react"
-import { COMPANY_INFO } from "@/lib/company-constants"
-import { getFooterTranslations, type Language } from "@/lib/translations"
+import Link from "next/link";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { COMPANY_INFO } from "@/lib/company-constants";
+import { getFooterTranslations, type Language } from "@/lib/translations";
 
 interface FooterProps {
-  currentLang: Language
+  currentLang: Language;
 }
 
 export default function Footer({ currentLang }: FooterProps) {
-  const t = getFooterTranslations(currentLang)
+  const t = getFooterTranslations(currentLang);
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -29,23 +29,37 @@ export default function Footer({ currentLang }: FooterProps) {
               />
               <span className="text-lg font-bold">{COMPANY_INFO.name}</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">{COMPANY_INFO.tagline[currentLang]}</p>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {COMPANY_INFO.tagline[currentLang]}
+            </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-3">
             <h3 className="text-base font-semibold">{t.company}</h3>
             <div className="flex flex-col space-y-1">
-              <Link href="/" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="/"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+              >
                 {t.home}
               </Link>
-              <Link href="/services" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="/services"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+              >
                 {t.services}
               </Link>
-              <Link href="/about" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="/about"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+              >
                 {t.about}
               </Link>
-              <Link href="/contact" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <Link
+                href="/contact"
+                className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+              >
                 {t.contact}
               </Link>
             </div>
@@ -57,15 +71,21 @@ export default function Footer({ currentLang }: FooterProps) {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-orange-400" />
-                <span className="text-gray-400 text-sm">{COMPANY_INFO.email}</span>
+                <span className="text-gray-400 text-sm">
+                  {COMPANY_INFO.email}
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-orange-400" />
-                <span className="text-gray-400 text-sm">{COMPANY_INFO.phone}</span>
+                <span className="text-gray-400 text-sm">
+                  {COMPANY_INFO.phone}
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-orange-400" />
-                <span className="text-gray-400 text-sm">{COMPANY_INFO.address}</span>
+                <span className="text-gray-400 text-sm">
+                  {COMPANY_INFO.address}
+                </span>
               </div>
             </div>
           </div>
@@ -73,19 +93,30 @@ export default function Footer({ currentLang }: FooterProps) {
 
         <div className="border-t border-gray-800 mt-6 pt-6">
           <div className="flex flex-wrap justify-center gap-4 mb-3">
-            <Link href="/legal" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+            <Link
+              href="/legal"
+              className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+            >
               {t.legal}
             </Link>
-            <Link href="/legal#privacy" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+            <Link
+              href="/legal#privacy"
+              className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+            >
               {t.privacy}
             </Link>
-            <Link href="/legal#terms" className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+            <Link
+              href="/legal#terms"
+              className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+            >
               {t.terms}
             </Link>
           </div>
-          <p className="text-gray-400 text-sm text-center">© {new Date().getFullYear()} {COMPANY_INFO.name}. {t.rights}</p>
+          <p className="text-gray-400 text-sm text-center">
+            © {new Date().getFullYear()} {COMPANY_INFO.name}. {t.rights}
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

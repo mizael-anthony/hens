@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/components/layout-wrapper"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/components/layout-wrapper";
 
 interface HeroTranslations {
-  title: string
-  titleAccent: string
-  subtitle: string
-  cta: string
+  title: string;
+  titleAccent: string;
+  subtitle: string;
+  cta: string;
 }
 
 interface HeroSectionProps {
   translations: {
-    en: HeroTranslations
-    fr: HeroTranslations
-  }
+    en: HeroTranslations;
+    fr: HeroTranslations;
+  };
 }
 
 export default function HeroSection({ translations }: HeroSectionProps) {
-  const { currentLang } = useLanguage()
-  const t = translations[currentLang]
+  const { currentLang } = useLanguage();
+  const t = translations[currentLang];
 
   return (
     <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
@@ -31,7 +31,9 @@ export default function HeroSection({ translations }: HeroSectionProps) {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
             {t.title} <span className="text-orange-400">{t.titleAccent}</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">{t.subtitle}</p>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+            {t.subtitle}
+          </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               asChild
@@ -47,5 +49,5 @@ export default function HeroSection({ translations }: HeroSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }

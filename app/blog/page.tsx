@@ -1,6 +1,5 @@
-import LayoutWrapper from "@/components/layout-wrapper"
-import BlogPageClient from "@/components/blog-page-client"
-
+import LayoutWrapper from "@/components/layout-wrapper";
+import BlogPageClient from "@/components/blog-page-client";
 
 // FIXME: We add blog page when needed
 const translations = {
@@ -67,13 +66,14 @@ const translations = {
     },
     noResults: {
       title: "Aucun article trouvé",
-      description: "Essayez d'ajuster vos termes de recherche ou parcourez nos catégories.",
+      description:
+        "Essayez d'ajuster vos termes de recherche ou parcourez nos catégories.",
     },
   },
-}
+};
 
 function BlogPage() {
-  return <BlogPageClient translations={translations} />
+  return <BlogPageClient translations={translations} />;
 }
 
 export default function Blog() {
@@ -81,5 +81,5 @@ export default function Blog() {
     <LayoutWrapper>
       <BlogPage />
     </LayoutWrapper>
-  )
+  );
 }

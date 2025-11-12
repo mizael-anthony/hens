@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/components/layout-wrapper"
+import { useLanguage } from "@/components/layout-wrapper";
 
 interface LegalPageClientProps {
-  children: (currentLang: 'en' | 'fr') => React.ReactNode
+  children: (currentLang: "en" | "fr") => React.ReactNode;
 }
 
 export default function LegalPageClient({ children }: LegalPageClientProps) {
-  const { currentLang } = useLanguage()
-  return <>{children(currentLang)}</>
+  const { currentLang } = useLanguage();
+  return <>{children(currentLang)}</>;
 }

@@ -16,6 +16,7 @@ This is a Next.js 15 portfolio/business website for Hens, a technology solutions
 ## Dependencies and Tech Stack
 
 Key dependencies include:
+
 - **Next.js 15.2.4** with App Router
 - **React 19** with TypeScript
 - **shadcn/ui** components built on Radix UI primitives
@@ -27,24 +28,28 @@ Key dependencies include:
 ## Architecture Overview
 
 ### App Router Structure
+
 - Uses Next.js App Router with TypeScript
 - Pages are organized under `app/` directory with route-based file structure
 - Server and client components are clearly separated
 
 ### UI Component System
+
 - Built on shadcn/ui component library (configured in components.json)
-- All UI components are in `components/ui/` 
+- All UI components are in `components/ui/`
 - Custom components in `components/` root
 - Uses Tailwind CSS with CSS variables for theming
 - Supports dark mode via class-based theme switching
 
 ### Internationalization
+
 - Bilingual support (English/French) implemented via React Context
 - Language context defined in `components/layout-wrapper.tsx`
 - Blog content and UI text are localized in `lib/blog-data.ts`
 - Use `useLanguage()` hook to access current language state
 
 ### Blog System
+
 - Static blog data managed in `lib/blog-data.ts`
 - Structured with BlogPost and BlogCategory interfaces
 - Content includes full markdown for individual post pages
@@ -52,11 +57,13 @@ Key dependencies include:
 - Dynamic routing via `app/blog/[slug]/page.tsx`
 
 ### Layout Architecture
+
 - Root layout in `app/layout.tsx` handles fonts and basic HTML structure
 - Main layout logic in `components/layout-wrapper.tsx` with Navigation/Footer
 - Consistent theming and responsive design throughout
 
 ### Configuration Notes
+
 - Next.js config ignores ESLint and TypeScript errors during builds
 - Images are unoptimized (likely for static deployment)
 - Uses pnpm for package management
@@ -65,6 +72,7 @@ Key dependencies include:
 ## Key Patterns
 
 When working with this codebase:
+
 - Follow the established component pattern with TypeScript interfaces
 - Use the existing language context for any new internationalized content
 - Maintain the shadcn/ui component patterns and Tailwind styling approach
@@ -74,6 +82,7 @@ When working with this codebase:
 ## API Routes
 
 The application includes:
+
 - Contact form API at `app/api/contact/route.ts` using Resend for email
 - Server actions are preferred over API routes where possible per Next.js 15 conventions
 

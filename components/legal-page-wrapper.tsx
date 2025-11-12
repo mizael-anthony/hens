@@ -1,16 +1,17 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/components/layout-wrapper"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import LegalNavigation from "@/components/legal-navigation"
-import { Shield, FileText, Scale } from "lucide-react"
-import { COMPANY_INFO } from "@/lib/company-constants"
+import { useLanguage } from "@/components/layout-wrapper";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import LegalNavigation from "@/components/legal-navigation";
+import { Shield, FileText, Scale } from "lucide-react";
+import { COMPANY_INFO } from "@/lib/company-constants";
 
 const translations = {
   en: {
     hero: {
       title: "Legal Notice",
-      subtitle: "Important legal information, terms of service, and privacy policies for Hens services.",
+      subtitle:
+        "Important legal information, terms of service, and privacy policies for Hens services.",
     },
     navigation: {
       title: "Quick Navigation",
@@ -49,13 +50,11 @@ const translations = {
         },
         intellectual: {
           title: "4. Intellectual Property",
-          content:
-            `All content, features, and functionality of our services are owned by ${COMPANY_INFO.name} and are protected by international copyright, trademark, and other intellectual property laws.`,
+          content: `All content, features, and functionality of our services are owned by ${COMPANY_INFO.name} and are protected by international copyright, trademark, and other intellectual property laws.`,
         },
         limitation: {
           title: "5. Limitation of Liability",
-          content:
-            `${COMPANY_INFO.name} shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`,
+          content: `${COMPANY_INFO.name} shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`,
         },
         termination: {
           title: "6. Termination",
@@ -102,12 +101,12 @@ const translations = {
     },
     disclaimer: {
       title: "Disclaimer",
-      content:
-        `The information on this website is provided on an 'as is' basis. ${COMPANY_INFO.name} makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or availability of the information contained on this website.`,
+      content: `The information on this website is provided on an 'as is' basis. ${COMPANY_INFO.name} makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, or availability of the information contained on this website.`,
     },
     legalContact: {
       title: "Legal Contact",
-      content: "For any legal inquiries or concerns regarding these terms, please contact us at:",
+      content:
+        "For any legal inquiries or concerns regarding these terms, please contact us at:",
       email: COMPANY_INFO.email,
       address: `Legal Department, ${COMPANY_INFO.name}, ${COMPANY_INFO.address}`,
     },
@@ -155,13 +154,11 @@ const translations = {
         },
         intellectual: {
           title: "4. Propriété Intellectuelle",
-          content:
-            `Tout le contenu, les fonctionnalités et la fonctionnalité de nos services appartiennent à ${COMPANY_INFO.name} et sont protégés par les lois internationales sur le droit d'auteur, les marques de commerce et autres propriétés intellectuelles.`,
+          content: `Tout le contenu, les fonctionnalités et la fonctionnalité de nos services appartiennent à ${COMPANY_INFO.name} et sont protégés par les lois internationales sur le droit d'auteur, les marques de commerce et autres propriétés intellectuelles.`,
         },
         limitation: {
           title: "5. Limitation de Responsabilité",
-          content:
-            `${COMPANY_INFO.name} ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation de nos services.`,
+          content: `${COMPANY_INFO.name} ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation de nos services.`,
         },
         termination: {
           title: "6. Résiliation",
@@ -208,29 +205,33 @@ const translations = {
     },
     disclaimer: {
       title: "Avertissement",
-      content:
-        `Les informations sur ce site web sont fournies 'en l'état'. ${COMPANY_INFO.name} ne fait aucune déclaration ou garantie de quelque nature que ce soit, expresse ou implicite, concernant l'exhaustivité, l'exactitude, la fiabilité ou la disponibilité des informations contenues sur ce site web.`,
+      content: `Les informations sur ce site web sont fournies 'en l'état'. ${COMPANY_INFO.name} ne fait aucune déclaration ou garantie de quelque nature que ce soit, expresse ou implicite, concernant l'exhaustivité, l'exactitude, la fiabilité ou la disponibilité des informations contenues sur ce site web.`,
     },
     legalContact: {
       title: "Contact Légal",
-      content: "Pour toute demande légale ou préoccupation concernant ces conditions, veuillez nous contacter à :",
+      content:
+        "Pour toute demande légale ou préoccupation concernant ces conditions, veuillez nous contacter à :",
       email: COMPANY_INFO.email,
       address: `Département Juridique, ${COMPANY_INFO.name}, ${COMPANY_INFO.address}`,
     },
   },
-}
+};
 
 export default function LegalPageWrapper() {
-  const { currentLang } = useLanguage()
-  const t = translations[currentLang]
+  const { currentLang } = useLanguage();
+  const t = translations[currentLang];
 
   return (
     <div className="bg-white">
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">{t.hero.title}</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t.hero.subtitle}</p>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            {t.hero.title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {t.hero.subtitle}
+          </p>
         </div>
       </section>
 
@@ -238,7 +239,10 @@ export default function LegalPageWrapper() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Navigation Sidebar */}
           <div className="lg:col-span-1">
-            <LegalNavigation navigationTitle={t.navigation.title} sections={t.navigation} />
+            <LegalNavigation
+              navigationTitle={t.navigation.title}
+              sections={t.navigation}
+            />
           </div>
 
           {/* Main Content */}
@@ -251,16 +255,28 @@ export default function LegalPageWrapper() {
                     <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
                       <FileText className="w-6 h-6 text-orange-600" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-gray-900">{t.companyInfo.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold text-gray-900">
+                      {t.companyInfo.title}
+                    </CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="p-8 pt-0">
                   <div className="space-y-4">
-                    <p className="text-gray-700">{t.companyInfo.content.name}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.director}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.registration}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.email}</p>
-                    <p className="text-gray-700">{t.companyInfo.content.address}</p>
+                    <p className="text-gray-700">
+                      {t.companyInfo.content.name}
+                    </p>
+                    <p className="text-gray-700">
+                      {t.companyInfo.content.director}
+                    </p>
+                    <p className="text-gray-700">
+                      {t.companyInfo.content.registration}
+                    </p>
+                    <p className="text-gray-700">
+                      {t.companyInfo.content.email}
+                    </p>
+                    <p className="text-gray-700">
+                      {t.companyInfo.content.address}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -275,16 +291,24 @@ export default function LegalPageWrapper() {
                       <Scale className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl font-bold text-gray-900">{t.terms.title}</CardTitle>
-                      <p className="text-sm text-gray-500 mt-1">{t.terms.lastUpdated}</p>
+                      <CardTitle className="text-2xl font-bold text-gray-900">
+                        {t.terms.title}
+                      </CardTitle>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {t.terms.lastUpdated}
+                      </p>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-8 pt-0 space-y-8">
                   {Object.entries(t.terms.sections).map(([key, section]) => (
                     <div key={key}>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">{section.title}</h3>
-                      <p className="text-gray-700 leading-relaxed">{section.content}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                        {section.title}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {section.content}
+                      </p>
                     </div>
                   ))}
                 </CardContent>
@@ -300,16 +324,24 @@ export default function LegalPageWrapper() {
                       <Shield className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl font-bold text-gray-900">{t.privacy.title}</CardTitle>
-                      <p className="text-sm text-gray-500 mt-1">{t.privacy.lastUpdated}</p>
+                      <CardTitle className="text-2xl font-bold text-gray-900">
+                        {t.privacy.title}
+                      </CardTitle>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {t.privacy.lastUpdated}
+                      </p>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="p-8 pt-0 space-y-8">
                   {Object.entries(t.privacy.sections).map(([key, section]) => (
                     <div key={key}>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">{section.title}</h3>
-                      <p className="text-gray-700 leading-relaxed">{section.content}</p>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                        {section.title}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {section.content}
+                      </p>
                     </div>
                   ))}
                 </CardContent>
@@ -319,5 +351,5 @@ export default function LegalPageWrapper() {
         </div>
       </div>
     </div>
-  )
+  );
 }

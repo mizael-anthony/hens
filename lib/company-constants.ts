@@ -22,6 +22,6 @@ export const COMPANY_INFO = {
   // Other constants
   tagline: {
     en: "Building the future, one line of code at a time.",
-    fr: "Construire l'avenir, une ligne de code à la fois."
-  }
-} as const
+    fr: "Construire l'avenir, une ligne de code à la fois.",
+  },
+} as const;

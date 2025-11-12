@@ -10,13 +10,13 @@ const nextConfig = {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'go-skill-icons.vercel.app',
-        port: '',
-        pathname: '/api/icons/**',
+        protocol: "https",
+        hostname: "go-skill-icons.vercel.app",
+        port: "",
+        pathname: "/api/icons/**",
       },
     ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

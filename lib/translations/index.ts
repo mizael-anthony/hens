@@ -1,45 +1,47 @@
-import enTranslations from "./en.json"
-import frTranslations from "./fr.json"
+import enTranslations from "./en.json";
+import frTranslations from "./fr.json";
 
-export type Language = "en" | "fr"
+export type Language = "en" | "fr";
 
-export type Translations = typeof enTranslations
+export type Translations = typeof enTranslations;
 
 export const translations = {
   en: enTranslations,
   fr: frTranslations,
-} as const
+} as const;
 
 // Helper function to get translations for a specific language
 export function getTranslations(lang: Language): Translations {
-  return translations[lang]
+  return translations[lang];
 }
 
 // Helper functions for specific sections
 export function getNavigationTranslations(lang: Language) {
-  return translations[lang].navigation
+  return translations[lang].navigation;
 }
 
 export function getFooterTranslations(lang: Language) {
-  return translations[lang].footer
+  return translations[lang].footer;
 }
 
 export function getHomeTranslations(lang: Language) {
-  return translations[lang].home
+  return translations[lang].home;
 }
 
 export function getAboutTranslations(lang: Language) {
-  return translations[lang].about
+  return translations[lang].about;
 }
 
 export function getServicesTranslations(lang: Language) {
-  return translations[lang].services
+  return translations[lang].services;
 }
 
 // Export for backward compatibility with existing code pattern
-export function createTranslationsObject<T extends keyof Translations>(section: T) {
+export function createTranslationsObject<T extends keyof Translations>(
+  section: T,
+) {
   return {
     en: enTranslations[section],
     fr: frTranslations[section],
-  }
+  };
 }

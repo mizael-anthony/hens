@@ -1,20 +1,23 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { getNavigationTranslations, type Language } from "@/lib/translations"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { getNavigationTranslations, type Language } from "@/lib/translations";
 
 interface NavigationProps {
-  currentLang: Language
-  onLanguageChange: (lang: Language) => void
+  currentLang: Language;
+  onLanguageChange: (lang: Language) => void;
 }
 
-export default function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const t = getNavigationTranslations(currentLang)
+export default function Navigation({
+  currentLang,
+  onLanguageChange,
+}: NavigationProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = getNavigationTranslations(currentLang);
 
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -34,16 +37,28 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            >
               {t.home}
             </Link>
-            <Link href="/services" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+            <Link
+              href="/services"
+              className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            >
               {t.services}
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            >
               {t.about}
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            >
               {t.contact}
             </Link>
           </div>
@@ -53,12 +68,16 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => onLanguageChange(currentLang === "en" ? "fr" : "en")}
+              onClick={() =>
+                onLanguageChange(currentLang === "en" ? "fr" : "en")
+              }
               className="flex items-center space-x-1 text-gray-600 hover:text-orange-600"
               aria-label={`Switch to ${currentLang === "en" ? "French" : "English"}`}
             >
               <Globe className="w-4 h-4" />
-              <span className="text-sm font-medium">{currentLang === "en" ? "FR" : "EN"}</span>
+              <span className="text-sm font-medium">
+                {currentLang === "en" ? "FR" : "EN"}
+              </span>
             </Button>
 
             <Button
@@ -71,8 +90,17 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -81,19 +109,31 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-orange-600 font-medium">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-orange-600 font-medium"
+              >
                 {t.home}
               </Link>
-              <Link href="/services" className="text-gray-700 hover:text-orange-600 font-medium">
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-orange-600 font-medium"
+              >
                 {t.services}
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-orange-600 font-medium">
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-orange-600 font-medium"
+              >
                 {t.about}
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-orange-600 font-medium">
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-orange-600 font-medium"
+              >
                 {t.contact}
               </Link>
-              
+
               <div className="flex items-center justify-between pt-2">
                 <Button
                   asChild
@@ -107,5 +147,5 @@ export default function Navigation({ currentLang, onLanguageChange }: Navigation
         )}
       </div>
     </nav>
-  )
+  );
 }

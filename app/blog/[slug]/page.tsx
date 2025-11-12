@@ -1,5 +1,5 @@
-import LayoutWrapper from "@/components/layout-wrapper"
-import BlogPostClient from "@/components/blog-post-client"
+import LayoutWrapper from "@/components/layout-wrapper";
+import BlogPostClient from "@/components/blog-post-client";
 
 const translations = {
   en: {
@@ -13,7 +13,8 @@ const translations = {
     readMore: "Read More",
     notFound: {
       title: "Article Not Found",
-      description: "The article you're looking for doesn't exist or has been moved.",
+      description:
+        "The article you're looking for doesn't exist or has been moved.",
       backToBlog: "Back to Blog",
     },
   },
@@ -28,18 +29,19 @@ const translations = {
     readMore: "Lire Plus",
     notFound: {
       title: "Article Non Trouvé",
-      description: "L'article que vous recherchez n'existe pas ou a été déplacé.",
+      description:
+        "L'article que vous recherchez n'existe pas ou a été déplacé.",
       backToBlog: "Retour au Blog",
     },
   },
-}
+};
 
 interface BlogPostPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 function BlogPostPage({ params }: BlogPostPageProps) {
-  return <BlogPostClient params={params} translations={translations} />
+  return <BlogPostClient params={params} translations={translations} />;
 }
 
 export default function BlogPost({ params }: BlogPostPageProps) {
@@ -47,5 +49,5 @@ export default function BlogPost({ params }: BlogPostPageProps) {
     <LayoutWrapper>
       <BlogPostPage params={params} />
     </LayoutWrapper>
-  )
+  );
 }
